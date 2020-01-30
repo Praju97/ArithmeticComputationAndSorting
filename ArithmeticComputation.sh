@@ -1,5 +1,6 @@
 #!/bin/bash -x
 
+count=1
 declare -A resultDictionary
 
 echo "Welcome To Arithmetic Computation And Sorting"
@@ -17,3 +18,8 @@ resultDictionary[result2]=$result2
 resultDictionary[result3]=$result3
 resultDictionary[result4]=$result4
 
+while(($count <= ${#resultDictionary[@]}))
+do
+  array[$count-1]=${resultDictionary[result$number]}
+  count=$((count+1))
+done
